@@ -17,8 +17,8 @@ def alarm(set_alarm_timer):
         break
 
 def actual_time():
-    set_timer = f"{hour.get()}:{min.get()}:{sec.get()}"
-    alarm(set_timer)
+    set_alarm_timer = f"{hour.get()}:{min.get()}:{sec.get()}"
+    alarm(set_alarm_timer)
 
 clock = Tk()
 
