@@ -2,7 +2,6 @@ from tkinter import *
 import datetime, time
 import winsound
 
-
 def alarm(set_alarm_timer):
     while True:
         time.sleep(1)
@@ -13,7 +12,7 @@ def alarm(set_alarm_timer):
         print(now)
         if now == set_alarm_timer:
             print("Time to Wake up")
-        winsound.PlaySound("sound.wav",winsound.SND_ASYNC)
+        winsound.PlaySound("alarm_clock", alarmsound.mp3)
         break
 
 def actual_time():
