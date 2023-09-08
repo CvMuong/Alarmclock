@@ -1,18 +1,19 @@
 from tkinter import *
-import datetime, time
+import datetime
+import time as tm
 import winsound
 
 def alarm(set_alarm_timer):
     while True:
-        time.sleep(1)
         current_time = datetime.datetime.now()
+        tm.sleep(10)
         now = current_time.strftime("%H:%M:%S")
         date = current_time.strftime("%d/%m/%Y")
         print("The Set Date is:",date)
         print(now)
         if now == set_alarm_timer:
             print("Time to Wake up")
-        winsound.PlaySound("alarm_clock", alarmsound.mp3)
+        winsound.PlaySound("sound.wav",winsound.SND_ASYNC)
         break
 
 def actual_time():
@@ -53,11 +54,11 @@ minTime= Entry(clock,textvariable = min,bg = "pink",width = 10).place(x=160,y=55
 secTime = Entry(clock,textvariable = sec,bg = "pink",width = 10).place(x=270,y=55)
 
 #To take the time input by user:
-submit = Button(clock,text = "Set Alarm",fg="black", bg= "white", width = 10,command = actual_time).place(x =150,y=90)
+submit = Button(clock,text = "Set Alarm",fg="black", bg= "white", width = 10,command = actual_time()).place(x =150,y=90)
 label = Label(clock, font=("ds-digital", 11), background = "black", foreground = "cyan")
 label.place(x=220, y=123)
 time()
-alarm = Label(clock, text = f"Thís time now is: ", bg = "black", fg = "white", font = 10).place(x=60,y=120)
+timenow = Label(clock, text = f"Thís time now is: ", bg = "black", fg = "white", font = 10).place(x=60,y=120)
 
 clock.mainloop()
 #Execution of the window.
