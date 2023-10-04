@@ -18,14 +18,17 @@ def Equation():
     c = int(soc.get())
     Delta = (pow(b, 2) - (4*a*c))
     if Delta < 0:
+        Label(eq, text=f"Phương trình có 2 nghiệm \n x1 = 2 \n x2 = 2", fg="black", bg="black", font="Arian 15").place(x=110, y=210)
         Label(eq, text="Phương trình vô nghiệm", fg = "green", bg="black", font="Arian 15").place(x=110, y=210)
     elif Delta == 0:
         x = (-b / (2*a))
+        Label(eq, text=f"Phương trình có 2 nghiệm \n x1 = 2 \n x2 = 2", fg="black", bg="black", font="Arian 15").place(x=110, y=210)
         Label(eq, text=f"Phương trình có nghiệm kép \n x = {x}", fg="green", bg="black", font="Arian 15").place(x=110, y=210)
     else:
         Delta = math.sqrt(Delta)
         x1 = ((-b + Delta) / (2*a))
         x2 = ((-b - Delta) / (2*a))
+        Label(eq, text=f"Phương trình có 2 nghiệm \n x1 = {x1} \n x2 = {x2}", fg="black", bg="black", font="Arian 15").place(x=110, y=210)
         Label(eq, text=f"Phương trình có 2 nghiệm \n x1 = {x1} \n x2 = {x2}", fg="green", bg="black", font="Arian 15").place(x=110, y=210)
 
 soa = StringVar()
